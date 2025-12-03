@@ -15,7 +15,9 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-32 pb-20 overflow-hidden transition-colors duration-300 bg-slate-950 bg-grid">
+    // FIX 1: Changed 'min-h-screen' to 'min-h-[100dvh]' and removed 'overflow-hidden' (changed to overflow-x-hidden)
+    // Added 'py-40' to ensure there is plenty of vertical breathing room
+    <section id="home" className="min-h-[100dvh] flex items-center justify-center relative py-40 overflow-x-hidden transition-colors duration-300 bg-slate-950 bg-grid">
       
       {/* Mouse Spotlight */}
       <div 
@@ -25,7 +27,7 @@ const Hero: React.FC = () => {
         }}
       />
 
-      {/* Background Text - Moved further back with negative Z-Index if needed, but opacity handles it */}
+      {/* Background Text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
         <h1 className="text-[12rem] md:text-[18rem] font-serif font-black leading-none text-slate-900 dark:text-white whitespace-nowrap">
           SYUSYI
@@ -58,14 +60,15 @@ const Hero: React.FC = () => {
                 </div>
               </h1>
               
-              {/* Bio Paragraph - Increased margin bottom (mb-12) to clear the button */}
-              <p className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans mb-12 transition-all duration-700 delay-500 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              {/* Bio Paragraph */}
+              <p className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans transition-all duration-700 delay-500 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 I'm <strong className="text-slate-900 dark:text-white font-serif italic text-2xl">Nursyasya Aina</strong>. 
                 A final-year Computer Science student specializing in Human-Centered Computing, dedicated to crafting intuitive and accessible digital experiences.
               </p>
 
-              {/* Button Container - Added z-30 to force it on top of everything */}
-              <div className={`relative z-30 flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              {/* Button Container */}
+              {/* FIX 2: Added 'mt-12' for huge spacing and 'z-50' to force it on top */}
+              <div className={`mt-12 relative z-50 flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                  <a href="#projects" className="group relative px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold overflow-hidden transition-transform hover:scale-105 shadow-2xl">
                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 dark:via-slate-900/20 to-transparent skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
                    <span className="relative flex items-center gap-3">
@@ -85,6 +88,7 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
+          {/* Right Image Section */}
           <div className={`lg:col-span-5 order-1 lg:order-2 relative flex justify-center lg:justify-end transition-all duration-1000 delay-300 transform ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
              <div className="relative w-full max-w-md aspect-[4/5] md:aspect-[3/4]">
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -111,6 +115,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
         <span className="text-xs font-mono uppercase tracking-widest text-slate-500">Scroll</span>
         <div className="w-5 h-8 border-2 border-slate-400 rounded-full flex justify-center pt-1">
