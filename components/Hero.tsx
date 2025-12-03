@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
 
           {/* IMAGE COLUMN */}
           <div
-            className={`lg:col-span-5 order-1 lg:order-2 relative z-10 flex justify-center lg:justify-end transition-all duration-1000 delay-300 transform ${
+            className={`lg:col-span-5 order-1 lg:order-2 relative z-0 flex justify-center lg:justify-end lg:pl-8 transition-all duration-1000 delay-300 transform ${
               isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
             }`}
           >
