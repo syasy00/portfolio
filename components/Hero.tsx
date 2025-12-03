@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative pt-24 pb-12 overflow-hidden transition-colors duration-300 bg-slate-950 bg-grid">
+    <section id="home" className="min-h-screen flex items-center justify-center relative pt-32 pb-20 overflow-hidden transition-colors duration-300 bg-slate-950 bg-grid">
       
       {/* Mouse Spotlight */}
       <div 
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         }}
       />
 
-      {/* Background Text */}
+      {/* Background Text - Moved further back with negative Z-Index if needed, but opacity handles it */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
         <h1 className="text-[12rem] md:text-[18rem] font-serif font-black leading-none text-slate-900 dark:text-white whitespace-nowrap">
           SYUSYI
@@ -46,7 +46,6 @@ const Hero: React.FC = () => {
               </div>
               
               {/* Main Headline */}
-              {/* FIX: Changed leading-[0.9] to leading-none to stop cropping */}
               <h1 className="text-6xl md:text-8xl font-serif font-bold text-slate-900 dark:text-white leading-none tracking-tight mb-8">
                 <div className={`transition-all duration-700 delay-100 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
                   Design.
@@ -54,18 +53,19 @@ const Hero: React.FC = () => {
                 <div className={`italic font-light text-slate-600 dark:text-slate-400 transition-all duration-700 delay-200 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
                   Develop.
                 </div>
-                {/* FIX: Added pb-4 to give the 'y' descender room */}
                 <div className={`pb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient-x transition-all duration-700 delay-300 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
                   Deploy.
                 </div>
               </h1>
               
-              <p className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans mb-10 transition-all duration-700 delay-500 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              {/* Bio Paragraph - Increased margin bottom (mb-12) to clear the button */}
+              <p className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans mb-12 transition-all duration-700 delay-500 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                 I'm <strong className="text-slate-900 dark:text-white font-serif italic text-2xl">Nursyasya Aina</strong>. 
                 A final-year Computer Science student specializing in Human-Centered Computing, dedicated to crafting intuitive and accessible digital experiences.
               </p>
 
-              <div className={`flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              {/* Button Container - Added z-30 to force it on top of everything */}
+              <div className={`relative z-30 flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
                  <a href="#projects" className="group relative px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold overflow-hidden transition-transform hover:scale-105 shadow-2xl">
                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 dark:via-slate-900/20 to-transparent skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
                    <span className="relative flex items-center gap-3">
