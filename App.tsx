@@ -6,7 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import CursorGlow from './components/CursorGlow';
+import CursorGlow from './components/CursorGlow'; // <--- IMPORT RESTORED
 import Preloader from './components/Preloader';
 
 const App: React.FC = () => {
@@ -15,7 +15,6 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
-    // Check system preference or default to dark
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
        // Optional: Set default based on system
     }
@@ -58,7 +57,7 @@ const App: React.FC = () => {
           style={{ width: `${scrollProgress * 100}%` }}
         ></div>
 
-        {/* Interactive Cursor Glow */}
+        {/* COMPONENT RESTORED HERE */}
         <CursorGlow />
 
         <div className="relative z-10">
