@@ -11,29 +11,18 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-[100dvh] flex items-center justify-center relative py-40 overflow-x-hidden transition-colors duration-300 bg-slate-950 bg-grid">
       
-      {/* --- LAYER 0: BACKGROUND BLOBS --- */}
-      {/* These are now completely separate from the content so they can't cover buttons */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Yellow Blob - Positioned top right */}
-        <div className="absolute top-[20%] right-[10%] w-96 h-96 bg-yellow-400/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob"></div>
-        {/* Purple Blob - Positioned bottom center-right */}
-        <div className="absolute bottom-[20%] right-[20%] w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-      </div>
-
-      {/* Background Text Title */}
+      {/* Background Text - Big "SYUSYI" */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
         <h1 className="text-[12rem] md:text-[18rem] font-serif font-black leading-none text-slate-900 dark:text-white whitespace-nowrap">
           SYUSYI
         </h1>
       </div>
 
-      {/* --- LAYER 1: CONTENT --- */}
-      {/* z-20 ensures this sits ON TOP of the blobs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           
           {/* TEXT COLUMN */}
-          <div className="lg:col-span-7 order-2 lg:order-1 relative">
+          <div className="lg:col-span-7 order-2 lg:order-1 relative z-20">
             <div className="relative">
               
               {/* Badge */}
@@ -62,9 +51,9 @@ const Hero: React.FC = () => {
                 A final-year Computer Science student specializing in Human-Centered Computing, dedicated to crafting intuitive and accessible digital experiences.
               </p>
 
-              {/* Button Container - Fully Clickable Now */}
+              {/* Button Container */}
               <div className={`relative flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                 <a href="#projects" className="group relative px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold overflow-hidden transition-transform hover:scale-105 shadow-2xl cursor-pointer">
+                 <a href="#projects" className="group relative px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold overflow-hidden transition-transform hover:scale-105 shadow-2xl cursor-pointer z-50">
                    <div className="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 dark:via-slate-900/20 to-transparent skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
                    <span className="relative flex items-center gap-3">
                      View Work <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -84,12 +73,10 @@ const Hero: React.FC = () => {
           </div>
 
           {/* IMAGE COLUMN */}
-          <div className={`lg:col-span-5 order-1 lg:order-2 relative flex justify-center lg:justify-end transition-all duration-1000 delay-300 transform ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
+          <div className={`lg:col-span-5 order-1 lg:order-2 relative z-10 flex justify-center lg:justify-end transition-all duration-1000 delay-300 transform ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
              <div className="relative w-full max-w-md aspect-[4/5] md:aspect-[3/4]">
                 
-                {/* Note: I removed the blobs from here and put them in Layer 0 above */}
-                
-                {/* Main Photo Card */}
+                {/* Photo Card */}
                 <div className="relative h-full w-full rounded-[2rem] overflow-hidden border-[8px] border-white dark:border-slate-800 shadow-2xl rotate-3 transition-all duration-500 hover:rotate-0 hover:scale-[1.02] hover:shadow-indigo-500/20 z-10 group">
                    <img src="syasya.jpeg" alt="Nursyasya Aina" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
