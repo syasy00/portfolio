@@ -14,11 +14,12 @@ const Hero: React.FC = () => {
       className="min-h-[100dvh] flex items-center justify-center relative py-40 overflow-x-hidden transition-colors duration-300 bg-slate-950 bg-grid"
     >
       {/* Background Text - Big "SYUSYI" */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center -z-10 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
         <h1 className="text-[12rem] md:text-[18rem] font-serif font-black leading-none text-slate-900 dark:text-white whitespace-nowrap">
           SYUSYI
         </h1>
       </div>
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
@@ -27,9 +28,8 @@ const Hero: React.FC = () => {
             <div className="relative">
               {/* Badge */}
               <div
-                className={`inline-block px-4 py-1 mb-6 border border-slate-900/10 dark:border-white/20 rounded-full bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm transition-all duration-700 transform ${
-                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
+                className={`inline-block px-4 py-1 mb-6 border border-slate-900/10 dark:border-white/20 rounded-full bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm transition-all duration-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
               >
                 <span className="font-mono text-xs font-bold tracking-widest uppercase text-pink-500 dark:text-pink-400">
                   • Welcome to my world
@@ -39,23 +39,20 @@ const Hero: React.FC = () => {
               {/* Main Headline */}
               <h1 className="text-6xl md:text-8xl font-serif font-bold text-slate-900 dark:text-white leading-none tracking-tight mb-8">
                 <div
-                  className={`transition-all duration-700 delay-100 transform ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
+                  className={`transition-all duration-700 delay-100 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    }`}
                 >
                   Design.
                 </div>
                 <div
-                  className={`italic font-light text-slate-600 dark:text-slate-400 transition-all duration-700 delay-200 transform ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
+                  className={`italic font-light text-slate-600 dark:text-slate-400 transition-all duration-700 delay-200 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    }`}
                 >
                   Develop.
                 </div>
                 <div
-                  className={`pb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient-x transition-all duration-700 delay-300 transform ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
+                  className={`pb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient-x transition-all duration-700 delay-300 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    }`}
                 >
                   Deploy.
                 </div>
@@ -63,9 +60,8 @@ const Hero: React.FC = () => {
 
               {/* Bio Paragraph */}
               <p
-                className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans mb-12 transition-all duration-700 delay-500 transform ${
-                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
+                className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans mb-12 transition-all duration-700 delay-500 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
               >
                 I'm{' '}
                 <strong className="text-slate-900 dark:text-white font-serif italic text-2xl">
@@ -77,9 +73,8 @@ const Hero: React.FC = () => {
 
               {/* Button Container */}
               <div
-                className={`relative flex items-center gap-6 transition-all duration-700 delay-700 transform ${
-                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
+                className={`relative flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
               >
                 <a
                   href="#projects"
@@ -107,9 +102,8 @@ const Hero: React.FC = () => {
 
           {/* IMAGE COLUMN */}
           <div
-            className={`lg:col-span-5 order-1 lg:order-2 relative z-0 flex justify-center lg:justify-end lg:pl-8 transition-all duration-1000 delay-300 transform ${
-              isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
-            }`}
+            className={`lg:col-span-5 order-1 lg:order-2 relative z-0 flex justify-center lg:justify-end lg:pl-8 transition-all duration-1000 delay-300 transform ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
+              }`}
           >
             <div className="relative w-full max-w-md aspect-[4/5] md:aspect-[3/4]">
               {/* Photo Card */}
