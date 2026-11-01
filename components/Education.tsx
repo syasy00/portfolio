@@ -5,7 +5,8 @@ import {
   GraduationCap,
   Calendar,
   ArrowUpRight,
-  CheckCircle2
+  CheckCircle2,
+  Award
 } from 'lucide-react';
 
 const Education: React.FC = () => {
@@ -39,13 +40,17 @@ const Education: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        {/* SECTION HEADER */}
         <div className="text-center mb-16">
           <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs uppercase tracking-widest">
             My Professional Journey
           </span>
 
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 dark:text-white mt-4">
-            Experience <span className="italic text-indigo-600 dark:text-indigo-400">& Education</span>
+            Experience{' '}
+            <span className="italic text-indigo-600 dark:text-indigo-400">
+              & Education
+            </span>
           </h2>
 
           <p className="text-slate-600 dark:text-slate-400 mt-5 max-w-2xl mx-auto">
@@ -59,7 +64,9 @@ const Education: React.FC = () => {
           {/* INTERNSHIP EXPERIENCE */}
           <div className="lg:col-span-2 p-8 md:p-10 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 shadow-xl">
 
+            {/* STATUS AND DURATION */}
             <div className="flex flex-wrap justify-between items-center gap-4 mb-8">
+
               <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-green-600 dark:text-green-400">
                 <CheckCircle2 className="w-4 h-4" />
                 Internship Completed
@@ -71,7 +78,9 @@ const Education: React.FC = () => {
               </span>
             </div>
 
+            {/* JOB INFORMATION */}
             <div className="flex items-start gap-4 mb-8">
+
               <div className="p-4 rounded-2xl bg-indigo-100 dark:bg-indigo-500/10">
                 <BriefcaseBusiness className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />
               </div>
@@ -91,6 +100,7 @@ const Education: React.FC = () => {
               </div>
             </div>
 
+            {/* EXPERIENCE OVERVIEW */}
             <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
               Completed an industrial internship in the Quality Department,
               gaining hands-on experience in system development,
@@ -99,9 +109,12 @@ const Education: React.FC = () => {
               the organization and accessibility of quality information.
             </p>
 
+            {/* KEY CONTRIBUTIONS */}
             <div className="space-y-6">
+
               {contributions.map((item, index) => (
                 <div key={index} className="flex gap-4">
+
                   <span className="w-2 h-2 mt-2 rounded-full bg-indigo-500 shrink-0" />
 
                   <div>
@@ -113,10 +126,12 @@ const Education: React.FC = () => {
                       {item.description}
                     </p>
                   </div>
+
                 </div>
               ))}
             </div>
 
+            {/* PROJECT LINK */}
             <a
               href="#projects"
               className="inline-flex items-center gap-2 mt-10 font-semibold text-indigo-600 dark:text-indigo-400 hover:gap-3 transition-all"
@@ -126,32 +141,87 @@ const Education: React.FC = () => {
             </a>
           </div>
 
-          {/* EDUCATION */}
+          {/* RIGHT COLUMN */}
           <div className="space-y-6">
 
+            {/* EDUCATION CARD */}
             <div className="p-8 rounded-3xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-white/10">
+
               <GraduationCap className="w-9 h-9 text-indigo-600 dark:text-indigo-400 mb-6" />
 
+              {/* STUDY PERIOD */}
               <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
                 2022 - 2026
               </span>
 
+              {/* DEGREE */}
               <h3 className="text-2xl font-serif font-bold text-slate-900 dark:text-white mt-3 mb-3">
                 Bachelor of Computer Science
               </h3>
 
+              {/* UNIVERSITY */}
               <p className="text-indigo-600 dark:text-indigo-400 font-medium">
                 Universiti Utara Malaysia
               </p>
 
-              <p className="text-sm text-slate-600 dark:text-slate-400 mt-5 leading-relaxed">
+              {/* CGPA HIGHLIGHT */}
+              <div className="mt-6 p-4 rounded-2xl bg-white dark:bg-slate-800/70 border border-indigo-100 dark:border-indigo-500/20 shadow-sm">
+
+                <div className="flex items-center gap-3">
+
+                  {/* AWARD ICON */}
+                  <div className="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 flex items-center justify-center shrink-0">
+                    <Award className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                  </div>
+
+                  {/* CGPA INFORMATION */}
+                  <div className="flex-1 min-w-0">
+
+                    <p className="text-[10px] sm:text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-1">
+                      Current CGPA
+                    </p>
+
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-2xl md:text-3xl font-bold font-serif text-indigo-600 dark:text-indigo-400">
+                        3.84
+                      </span>
+
+                      <span className="text-sm font-mono text-slate-400 dark:text-slate-500">
+                        / 4.00
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* CGPA PROGRESS INDICATOR */}
+                <div
+                  className="mt-4 h-1.5 w-full rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden"
+                  role="progressbar"
+                  aria-label="Current CGPA"
+                  aria-valuemin={0}
+                  aria-valuemax={4}
+                  aria-valuenow={3.84}
+                >
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-purple-500"
+                    style={{ width: '96%' }}
+                  />
+                </div>
+              </div>
+
+              {/* SPECIALIZATION */}
+              <p className="text-sm text-slate-600 dark:text-slate-400 mt-6 leading-relaxed">
                 Major in Human-Centered Computing, focusing on
                 software development, usability, user experience,
                 and human-centered system design.
               </p>
+
             </div>
 
+            {/* AREAS OF INTEREST CARD */}
             <div className="p-8 rounded-3xl bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+
               <p className="text-xs font-mono uppercase tracking-widest text-indigo-200 mb-4">
                 Areas of Interest
               </p>
@@ -176,6 +246,7 @@ const Education: React.FC = () => {
                   </span>
                 ))}
               </div>
+
             </div>
 
           </div>

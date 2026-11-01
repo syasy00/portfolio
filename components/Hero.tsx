@@ -63,17 +63,17 @@ const Hero: React.FC = () => {
                   }`}
               >
 
+
                 I'm{' '}
                 <strong className="text-slate-900 dark:text-white font-serif italic text-2xl">
                   Nursyasya Aina
                 </strong>
-                . A Computer Science student specializing in Human-Centered
-                Computing at Universiti Utara Malaysia. I recently completed
-                my internship at Advanced Energy, where I gained hands-on
-                experience in web development, quality systems, and process
-                improvement.
+                , a Computer Science graduate specializing in Human-Centered
+                Computing from Universiti Utara Malaysia. With hands-on
+                industry experience at Advanced Energy, I'm passionate
+                about building intuitive digital solutions, improving
+                workflows, and transforming ideas into meaningful technology.
               </p>
-
               {/* Button Container */}
               <div
                 className={`relative flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
