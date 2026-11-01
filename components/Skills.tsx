@@ -1,29 +1,33 @@
 import React from 'react';
 
 const Skills: React.FC = () => {
-  // Organized visually like a keyboard layout
-  const keyboardRows = [
-    [
-      { name: "Python", color: "text-blue-500", label: "Py" },
-      { name: "Flutter", color: "text-sky-400", label: "Fl" },
-      { name: "Dart", color: "text-cyan-400", label: "Da" },
-      { name: "Java", color: "text-red-500", label: "Ja" },
-      { name: "MySQL", color: "text-orange-500", label: "SQL" },
-      { name: "React", color: "text-cyan-300", label: "Re" },
-    ],
-    [
-      { name: "IoT", color: "text-green-500", label: "IoT" },
-      { name: "Docker", color: "text-blue-600", label: "Dk" },
-      { name: "Git", color: "text-red-400", label: "Git" },
-      { name: "Figma", color: "text-pink-500", label: "Fi" },
-      { name: "Firebase", color: "text-yellow-500", label: "Fb" },
-    ],
-    [
-       { name: "Tailwind", color: "text-cyan-400", label: "Tw", width: "w-32" }, // Spacebar-ish
-       { name: "Arduino", color: "text-teal-500", label: "Ard" },
-       { name: "C++", color: "text-blue-700", label: "C++" },
-    ]
-  ];
+
+
+const keyboardRows = [
+  [
+    { name: "Python", color: "text-blue-500", label: "Py" },
+    { name: "Flutter", color: "text-sky-400", label: "Fl" },
+    { name: "Dart", color: "text-cyan-400", label: "Da" },
+    { name: "Java", color: "text-red-500", label: "Ja" },
+    { name: "MySQL", color: "text-orange-500", label: "SQL" },
+    { name: "React", color: "text-cyan-300", label: "Re" },
+  ],
+  [
+    { name: "Power BI", color: "text-yellow-500", label: "BI" },
+    { name: "Excel VBA", color: "text-green-500", label: "VBA" },
+    { name: "Git", color: "text-red-400", label: "Git" },
+    { name: "Figma", color: "text-pink-500", label: "Fi" },
+    { name: "Firebase", color: "text-yellow-500", label: "Fb" },
+  ],
+  [
+    { name: "Tailwind", color: "text-cyan-400", label: "Tw", width: "w-32" },
+    { name: "IoT", color: "text-green-500", label: "IoT" },
+    { name: "Docker", color: "text-blue-600", label: "Dk" },
+    { name: "Arduino", color: "text-teal-500", label: "Ard" },
+    { name: "C++", color: "text-blue-700", label: "C++" },
+  ]
+];
+
 
   return (
     <section id="skills" className="py-32 relative overflow-hidden transition-colors duration-300">

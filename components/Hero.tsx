@@ -27,9 +27,8 @@ const Hero: React.FC = () => {
             <div className="relative">
               {/* Badge */}
               <div
-                className={`inline-block px-4 py-1 mb-6 border border-slate-900/10 dark:border-white/20 rounded-full bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm transition-all duration-700 transform ${
-                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
+                className={`inline-block px-4 py-1 mb-6 border border-slate-900/10 dark:border-white/20 rounded-full bg-white/50 dark:bg-slate-900/30 backdrop-blur-sm transition-all duration-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
               >
                 <span className="font-mono text-xs font-bold tracking-widest uppercase text-pink-500 dark:text-pink-400">
                   • Welcome to my world
@@ -39,23 +38,20 @@ const Hero: React.FC = () => {
               {/* Main Headline */}
               <h1 className="text-6xl md:text-8xl font-serif font-bold text-slate-900 dark:text-white leading-none tracking-tight mb-8">
                 <div
-                  className={`transition-all duration-700 delay-100 transform ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
+                  className={`transition-all duration-700 delay-100 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    }`}
                 >
                   Design.
                 </div>
                 <div
-                  className={`italic font-light text-slate-600 dark:text-slate-400 transition-all duration-700 delay-200 transform ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
+                  className={`italic font-light text-slate-600 dark:text-slate-400 transition-all duration-700 delay-200 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    }`}
                 >
                   Develop.
                 </div>
                 <div
-                  className={`pb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient-x transition-all duration-700 delay-300 transform ${
-                    isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-                  }`}
+                  className={`pb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 animate-gradient-x transition-all duration-700 delay-300 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
+                    }`}
                 >
                   Deploy.
                 </div>
@@ -63,23 +59,25 @@ const Hero: React.FC = () => {
 
               {/* Bio Paragraph */}
               <p
-                className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans mb-12 transition-all duration-700 delay-500 transform ${
-                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
+                className={`text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-lg leading-relaxed font-sans mb-12 transition-all duration-700 delay-500 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
               >
+
                 I'm{' '}
                 <strong className="text-slate-900 dark:text-white font-serif italic text-2xl">
                   Nursyasya Aina
                 </strong>
-                . A final-year Computer Science student specializing in Human-Centered
-                Computing, dedicated to crafting intuitive and accessible digital experiences.
+                . A Computer Science student specializing in Human-Centered
+                Computing at Universiti Utara Malaysia. I recently completed
+                my internship at Advanced Energy, where I gained hands-on
+                experience in web development, quality systems, and process
+                improvement.
               </p>
 
               {/* Button Container */}
               <div
-                className={`relative flex items-center gap-6 transition-all duration-700 delay-700 transform ${
-                  isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-                }`}
+                className={`relative flex items-center gap-6 transition-all duration-700 delay-700 transform ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+                  }`}
               >
                 <a
                   href="#projects"
@@ -98,7 +96,9 @@ const Hero: React.FC = () => {
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500 group-hover:bg-green-400 transition-colors" />
                   </span>
                   <span className="text-sm font-medium text-slate-500 dark:text-slate-400 ml-2 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
-                    Seeking for internship
+
+                    Open to full-time opportunities
+
                   </span>
                 </div>
               </div>
@@ -107,9 +107,8 @@ const Hero: React.FC = () => {
 
           {/* IMAGE COLUMN */}
           <div
-            className={`lg:col-span-5 order-1 lg:order-2 relative z-0 flex justify-center lg:justify-end lg:pl-8 transition-all duration-1000 delay-300 transform ${
-              isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
-            }`}
+            className={`lg:col-span-5 order-1 lg:order-2 relative z-0 flex justify-center lg:justify-end lg:pl-8 transition-all duration-1000 delay-300 transform ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'
+              }`}
           >
             <div className="relative w-full max-w-md aspect-[4/5] md:aspect-[3/4]">
               {/* Photo Card */}

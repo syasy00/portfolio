@@ -10,7 +10,7 @@ const CursorGlow: React.FC = () => {
     const handlePointerMove = (e: PointerEvent) => {
       const { clientX, clientY } = e;
       
-      // Native animation for smooth trailing effect
+      
       blob.animate({
         left: `${clientX}px`,
         top: `${clientY}px`

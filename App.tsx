@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CursorGlow from './components/CursorGlow'; // <--- IMPORT RESTORED
 import Preloader from './components/Preloader';
+import Education from './components/Education';
+
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -62,13 +64,14 @@ const App: React.FC = () => {
 
         <div className="relative z-10">
           <Navbar toggleTheme={toggleTheme} isDark={theme === 'dark'} />
-          <main className="space-y-0">
-            <Hero />
-            <Skills />
-            <About />
-            <Projects />
-            <Contact />
-          </main>
+<main className="space-y-0">
+  <Hero />
+  <Education />
+  <Skills />
+  <About />
+  <Projects />
+  <Contact />
+</main>
           <Footer />
         </div>
       </div>
